@@ -84,7 +84,15 @@ class hepsi1:
 							for k,t in enumerate(neighAr2):
 								if t in pointdic:
 									sum=sum+ pointdic[t]
-						pickme.put((-sum,b))
+							pickme.put((-sum,b))
+						else:
+							sum=0
+							neighAr2=findNeighbor(b,100)
+							sum= sum + 1.5*pointdic[b]
+							for k,t in enumerate(neighAr2):
+								if t in pointdic:
+									sum=sum+ pointdic[t]
+							pickme.put((sum,b))
 				goal = pickme.get()[1]
 			return goal
 
