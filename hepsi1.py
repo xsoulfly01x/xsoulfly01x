@@ -115,5 +115,5 @@ class hepsi1:
 			return path
 		path = pathfinder(list(loc),goal)
 		print(path)
-		return path
+		return [goal]
  
