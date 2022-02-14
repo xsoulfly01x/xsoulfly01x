@@ -77,22 +77,19 @@ class hepsi1:
 				for a,b in enumerate(neighAr1):
 					sum=0
 					if b in pointdic:
-						if game_point-pointdic[b] >= 0:
-							sum=0
-							neighAr2=findNeighbor(b,100)
-							sum= sum + 1.5*pointdic[b]
-							for k,t in enumerate(neighAr2):
-								if t in pointdic:
-									sum=sum+ pointdic[t]
-							pickme.put((-sum,b))
-						else:
-							sum=0
-							neighAr2=findNeighbor(b,100)
-							sum= sum + 1.5*pointdic[b]
-							for k,t in enumerate(neighAr2):
-								if t in pointdic:
-									sum=sum+ pointdic[t]
-							pickme.put((sum,b))
+						sum=0
+						neighAr2=findNeighbor(b,100)
+						sum= sum + 1.5*pointdic[b]
+						for k,t in enumerate(neighAr2):
+							if t in pointdic:
+								sum=sum+ pointdic[t]
+								neighAr3=findNeighbor(t,100)
+								for l,m in enumerate(neighAr3):
+									if m in pointdic:
+										sum=sum+ pointdic[m]
+						pickme.put((-sum,b))
+							
+
 				goal = pickme.get()[1]
 			return goal
 
