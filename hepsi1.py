@@ -65,10 +65,11 @@ class hepsi1:
 						pointdic[tuple(m)] = self.clrDictionary[key][1] #if the colors match, put the corresponding point from the key to the center dictionary
 			initLocs = [[25, 175],[25, 375],[25, 575],[175, 25],[375, 25],[575, 25],[175, 725],[375, 725],[575, 725]]
 			if whereami in initLocs:
-				neighAr=findNeighbor(whereami,40)
+				neighAr=findNeighbor(whereami,50)
 				for i,j in enumerate(neighAr):
 					if j in pointdic:
-						goal = j
+						goal[0]=j[0]-5
+						goal[1]=j[1]
 			else:
 				#adjust loc to center point later
 				#egemennnn aklın bı sey geldi xd
