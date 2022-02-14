@@ -68,7 +68,7 @@ class hepsi1:
 				neighAr=findNeighbor(whereami,50)
 				for i,j in enumerate(neighAr):
 					if j in pointdic:
-						goal=[j[0]-15,j[1]]
+						goal=[j[0],j[1]]
 			else:
 				#adjust loc to center point later
 				#egemennnn aklın bı sey geldi xd
