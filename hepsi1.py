@@ -76,7 +76,7 @@ class hepsi1:
 				neighAr1=findNeighbor(whereami,100)
 				for a,b in enumerate(neighAr1):
 					sum=0
-					if b in pointdic:
+					if b in pointdic and ((pointdic[b]-game_point) >= 0):
 						sum=0
 						neighAr2=findNeighbor(b,100)
 						sum= sum + 1.5*pointdic[b]
