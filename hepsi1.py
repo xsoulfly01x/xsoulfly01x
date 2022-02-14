@@ -87,7 +87,10 @@ class hepsi1:
 								for l,m in enumerate(neighAr3):
 									if m in pointdic:
 										sum=sum+ 1.5*pointdic[m]
-						pickme.put((-sum,b))
+						if game_point-pointdic[b] >= 0:
+							pickme.put((-sum,b))
+						else:
+							pickme.put((sum,b))
 							
 
 				goal = pickme.get()[1]
