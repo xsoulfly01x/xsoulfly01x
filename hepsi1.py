@@ -100,18 +100,18 @@ class hepsi1:
 					path.append([loc[0], loc[1]+i])
 					i=i+1
 			elif x<0:
-					while i<=-x:
-						path.append([loc[0], loc[1]-i])
-						i=i+1
+				while i<=-x:
+					path.append([loc[0], loc[1]-i])
+					i=i+1
 			elif y>0:
 				i=0
 				while i<=y:
-					path.append([loc[0], loc[1]+i])
+					path.append([loc[0]+i, loc[1]])
 					i=i+1
 			elif y<0:
-					while i<=-y:
-						path.append([loc[0], loc[1]-i])
-						i=i+1
+				while i<=-y:
+					path.append([loc[0]-i, loc[1]])
+					i=i+1
 			return path
 		path = pathfinder(list(loc),goal)
 		print(loc)
