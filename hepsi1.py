@@ -89,7 +89,7 @@ class hepsi1:
 										sum=sum+ 1.5*pointdic[m]
 						if game_point-pointdic[b] >= 0:
 							pickme.put((-sum,b))
-						if game_point-pointdic[b] <= 0 and pointdic[b]!=0
+						if game_point-pointdic[b] <= 0 and pointdic[b]!=0:
 							pickme.put((sum,b))
 							
 
